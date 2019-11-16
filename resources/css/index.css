@@ -1,0 +1,19 @@
+*  {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+h1 {
+  color: Red;
+}
+
+
+p, 
+li {
+  font-size: 26px;
+}
+
+
+a {
+  text-decoration: none;
+}

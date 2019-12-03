@@ -10,15 +10,18 @@ body {
 
 h1 {
   color: White;
+  text-align: center;
 }
 
 
 p, 
 li {
   font-size: 26px;
+  text-align: center;
 }
 
 
 a {
   text-decoration: none;
 }
+

@@ -3,22 +3,48 @@
 }
 
 body {
-	background-color: Red;
-	color: White;
+  background-color: Red;
+  color: White;
 }
 
 
 h1 {
   color: White;
+  text-align: center;
 }
 
 
 p, 
 li {
   font-size: 26px;
+  text-align: center;
 }
 
 
 a {
+  color: inherit;
   text-decoration: none;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  grid-gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  padding: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }

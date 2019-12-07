@@ -14,8 +14,10 @@
       context.clearRect(0, 0, canvas.width, canvas.height);
     }
 
-    function shareLetter() {
-      
+    function saveLetter() {
+      var canvas = document.getElementById("letter-canvas");
+      var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+      window.location.href=image; // it will save locally
     }
   </script>
 </head>
@@ -30,7 +32,7 @@
           <a class="nav-link" href="#" onclick="clearCanvas()">Clear</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#" onclick="shareLetter()">Send Letter</a>
+        <a class="nav-link" href="#" onclick="saveLetter()">Save Drawing</a>
       </li>
     </ul>
   </nav>

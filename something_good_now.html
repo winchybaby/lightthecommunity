@@ -1,12 +1,40 @@
 <html>
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+  <link href="./resources/css/something_good_now.css" type="text/css" rel="stylesheet">
   <title>LightTheCommunity</title>
   <meta charset="utf-8">
 </head>
 <body>
-	<a href="index.html">
-		<img src="./resources/icons/left-arrow.png" height=64 width=64 style="float:left">
-	</a>
+  <nav class="navbar navbar-expand-sm navbar-dark" id="main-navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Back</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div class="invitation" id="main-invitation">
+    An even longer string of text!
+  </div>
+
+  <script>
+    var serviceIdeas = 
+    [
+      "Offer to get someone dessert.",
+      "Offer to get someone water.",
+      "Go up to someone you don't know and introduce yourself.",
+      "Think of someone here that you're grateful for. Go up to them and tell them why.",
+      "Give Bishop Sellers a high five!",
+      "Find Brother Call and tell him he's awesome.",
+      "Give Brother Jeetan a compliment.",
+      "Help pick up trash at a table.",
+      "Thank one of your leaders for their service."
+    ];
+      
+    var randomIndex = Math.floor(Math.random() * serviceIdeas.length);
+    document.getElementById("main-invitation").innerHTML = serviceIdeas[randomIndex];
+  </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+  }
+  
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+
+.colors {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.color {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  border: 1px solid black;
+}
+  
+.color.black { background-color: black; }
+.color.red { background-color: red; }
+.color.green { background-color: green; }
+.color.blue { background-color: blue; }
+.color.white { background-color: white; }
+
+.navbar-expand-sm {
+  background-color: red;
+}
+
+.nav-link {
+  font-weight: normal;
+}

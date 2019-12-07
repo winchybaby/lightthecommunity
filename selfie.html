@@ -1,48 +1,34 @@
 <html>
 <head>
-  <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./resources/css/index.css" type="text/css">
+  <link rel="stylesheet" href="./resources/css/canvas.css" type="text/css">
   <title>LightTheCommunity</title>
   <meta charset="utf-8">
-    <style>
-
-  #videoElement {
-  	display: flex;
-    text-align: center;
-	align-items: center;
-  	justify-content: center;
-    width: 800px;
-    height: 600px;
-    background-color: #666;
-  }
-
-  </style>
+  <script src="./resources/js/camvas.js"></script>
+  <script>
+    window.onload = function(){
+    var ctx = document.getElementsByTagName('canvas')[0].getContext('2d')
+    var draw = function(video, dt) {
+      ctx.drawImage(video, 0, 0)
+    }
+    
+    var myCamvas = new camvas(ctx, draw)
+}
+  </script>
 </head>
 <body>
-	
-<a href="index.html">
-	<img src="./resources/icons/left-arrow.png" height=64 width=64 style="float:left">
-</a>
+  <nav class="navbar navbar-expand-sm navbar-dark" id="main-navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Back</a>
+      </li>
+    </ul>
+  </nav>
 
-<div align="center" id="container">
-
-	<video autoplay="true" id="videoElement">
-	
-	</video>
-</div>
-
-<script>
-var video = document.querySelector("#videoElement");
-
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-    })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}
-</script>
+  <div>
+    <canvas class="canvas" id="letter-canvas"></canvas>
+  </div>
 </body>
 
 </html>

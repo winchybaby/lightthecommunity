@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./resources/css/index.css" type="text/css">
+  <link rel="stylesheet" href="./resources/css/letter.css" type="text/css">
+  <link rel="stylesheet" href="./resources/css/canvas.css" type="text/css">
   <title>LightTheCommunity</title>
   <meta charset="utf-8">
+  <script type="text/javascript">
+    function clearCanvas() {
+      var canvas = document.getElementById("letter-canvas");
+      var context = canvas.getContext('2d');
+      context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function shareLetter() {
+      
+    }
+  </script>
 </head>
 
 <body>
-  <a href="index.html">
-    <img src="./resources/icons/left-arrow.png" height=64 width=64 style="float:left">
-  </a>
-  <div id="canvas-container" style="margin-top: 64px;">
-    <canvas class="letter-canvas" id="letter"></canvas>
+  <nav class="navbar navbar-expand-sm navbar-dark" id="main-navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Back</a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="#" onclick="clearCanvas()">Clear</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" onclick="shareLetter()">Send Letter</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="colors">
+    <div class="color black"></div>
+    <div class="color red"></div>
+    <div class="color green"></div>
+    <div class="color blue"></div>
+    <div class="color white"></div>
   </div>
+
+  <div class="canvas-container">
+    <canvas class="canvas" id="letter-canvas"></canvas>
+  </div>
+
   <script src="./resources/js/drawing-app.js"></script>
 </body>
 

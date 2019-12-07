@@ -7,19 +7,16 @@ body {
   color: White;
 }
 
-
 h1 {
   color: White;
   text-align: center;
 }
-
 
 p, 
 li {
   font-size: 26px;
   text-align: center;
 }
-
 
 a {
   color: inherit;
@@ -43,18 +40,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid white;
+  border: 4px solid white;
   padding: 40px;
-  font-size: 30px;
+  font-size: 42px;
+  font-weight: bold;
   text-align: center;
 }
 
-.letter-canvas {
-  height: 100%;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: white;
+.navbar-expand-sm {
+  background-color: red;
+}
+
+.nav-link {
+  font-weight: normal;
 }
